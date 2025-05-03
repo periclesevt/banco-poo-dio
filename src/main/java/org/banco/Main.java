@@ -1,0 +1,17 @@
+package org.banco;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Conta cc = new ContaCorrente();
+
+        cc.depositar(100);
+
+        Conta poupanca = new ContaPoupanca();
+
+        cc.tranferir(poupanca, 100);
+
+        cc.imprimirExtrato();
+        poupanca.imprimirExtrato();
+    }
+}

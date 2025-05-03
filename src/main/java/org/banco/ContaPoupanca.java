@@ -1,25 +1,11 @@
 package org.banco;
 
-public class ContaPoupanca {
+public class ContaPoupanca extends ContaImpl {
 
-    public int agencia;
-
-    public int numero;
-
-    public double saldo;
-
-    public void sacar(){
-
-
-    }
-
-    public void depositar(){
-
-
-    }
-
-    public void tranferir(){
-
+    @Override
+    public void imprimirExtrato() {
+        System.out.println("===Extrato Conta Poupanca ===");
+        super.imprimirInfosComuns();
 
     }
 }
