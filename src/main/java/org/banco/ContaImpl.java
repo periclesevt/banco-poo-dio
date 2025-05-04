@@ -6,14 +6,14 @@ public abstract class ContaImpl implements Conta{
     private static int SEQUENCIAL = 1;
 
     protected int agencia;
-
     protected int numero;
-
     protected double saldo;
+    protected Cliente cliente;
 
-    public ContaImpl(){
+    public ContaImpl(Cliente cliente){
         this.agencia = ContaImpl.AGENCIA_PADRAO;
         this.numero = SEQUENCIAL++;
+        this.cliente = cliente;
     }
 
     @Override
@@ -35,6 +35,7 @@ public abstract class ContaImpl implements Conta{
     }
 
     protected void imprimirInfosComuns() {
+        System.out.println(String.format("Titular: %s", this.cliente.getNome()));
         System.out.println(String.format("Agencia: %d", this.agencia));
         System.out.println(String.format("Numero: %d", this.numero));
         System.out.println(String.format("Saldo: %.2f", this.saldo));
