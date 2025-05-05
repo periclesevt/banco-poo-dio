@@ -6,11 +6,10 @@ public class ContaCorrente extends ContaImpl {
         super(cliente);
     }
 
-
     @Override
     public void imprimirExtrato() {
         System.out.println("===Extrato Conta Corrente ===");
-        super.imprimirInfosComuns();
+        imprimirInfosComuns();
 
     }
 
